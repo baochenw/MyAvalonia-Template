@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <TrimmerRootDescriptor Include="$(MSBuildThisFileDirectory)TrimmerRootDescriptor.xml" />
+  </ItemGroup>
+</Project>

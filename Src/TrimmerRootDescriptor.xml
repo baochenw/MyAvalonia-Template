@@ -1,0 +1,7 @@
+<linker>
+  <assembly fullname="MyAvalonia" preserve="all" />
+  <assembly fullname="Prism" preserve="all" />
+  <assembly fullname="Prism.Avalonia" preserve="all" />
+  <assembly fullname="Prism.DryIoc.Avalonia" preserve="all" />
+  <assembly fullname="DryIoc" preserve="all" />
+</linker>

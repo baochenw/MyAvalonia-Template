@@ -36,16 +36,22 @@
   </PropertyGroup>
   <PropertyGroup Condition="$(IsLinux)">
     <DefineConstants>$(DefineConstants);LINUX</DefineConstants>
+    <RuntimeIdentifiers>linux-x86;linux-x64;linux-arm;linux-arm64;linux-musl-x64;linux-musl-arm64</RuntimeIdentifiers>
+    <PublishReadyToRunEmitSymbols Condition="'$(PublishReadyToRun)' == 'true'">true</PublishReadyToRunEmitSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="$(IsMacos)">
     <DefineConstants>$(DefineConstants);MACOS</DefineConstants>
     <SupportedOSPlatformVersion>13.0.0</SupportedOSPlatformVersion>
     <RuntimeIdentifiers>osx-x64;osx-arm64</RuntimeIdentifiers>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishReadyToRunEmitSymbols>false</PublishReadyToRunEmitSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="$(IsWindows)">
     <DefineConstants>$(DefineConstants);WINDOWS</DefineConstants>
     <!-- <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>-->
     <!-- <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>-->
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <PublishReadyToRunEmitSymbols Condition="'$(PublishReadyToRun)' == 'true'">true</PublishReadyToRunEmitSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="$(IsDesktops)">
     <DefineConstants>$(DefineConstants);DESKTOPS</DefineConstants>
